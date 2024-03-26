@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+        <div class="right_row">
+
+            <div class="row border-radius">
+                <div class="settings shadow">
+                    <div class="settings_title">
+                        <h3>Account Settings</h3>
+                    </div>
+                    <div class="settings_content">
+                        <ul>
+                            <li>
+                                <p><b>Notifications Sound</b><br>A sound will be played each time you receive a new activity notification</p>
+                                <label class="switch"><input type="checkbox" class="primary"><span class="slider round"></span></label>
+                            </li>
+                            <li>
+                                <p><b>Notifications Email</b><br>We’ll send you an email to your account each time you receive a new activity notification</p>
+                                <label class="switch"><input type="checkbox" class="primary" checked><span class="slider round"></span></label>
+                            </li>
+                            <li>
+                                <p><b>Friend’s Birthdays</b><br>Choose wheather or not receive notifications about your friend’s birthdays on your newsfeed</p>
+                                <label class="switch"><input type="checkbox" class="primary" checked><span class="slider round"></span></label>
+                            </li>
+                            <li>
+                                <p><b>Chat Message Sound</b><br>A sound will be played each time you receive a new message on an inactive chat window</p>
+                                <label class="switch"><input type="checkbox" class="primary"><span class="slider round"></span></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestions_row">
+            <div class="row shadow">
+                <div class="row_title">
+                    <span>Profile Settings</span>
+                </div>
+                <div class="menusetting_contain">
+                    <ul>
+                        <li>
+                            <a href="{% url 'edit-profile' %}">Edit Profile</a>
+                        </li>
+                        <li>
+                            <a href="settings.html" id="settings-select">Account Settings</a>
+                        </li>
+                        <li>
+                            <a href="Change-Password.html">Change Password</a>
+                        </li>
+                        <li>
+                            <a href="#">Hobbies and Interests</a>
+                        </li>
+                        <li>
+                            <a href="#">Education and Employement</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="row shadow">
+                <div class="row_title">
+                    <span>Pages You May Like</span>
+                    <a href="#">see more..</a>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-1.png' %}" alt="" />
+                    <span><a href=""><b>The Marina Bar</b></a><br>Restaurant / Bar</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-2.jpg' %}" alt="" />
+                    <span><a href=""><b>Caverna Roch</b></a><br>Rock / Band</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-3.png' %}" alt="" />
+                    <span><a href=""><b>Pixel Digital Design</b></a><br>Company</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-1.png' %}" alt="" />
+                    <span><a href=""><b>The Marina Bar</b></a><br>Restaurant / Bar</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-2.jpg' %}" alt="" />
+                    <span><a href=""><b>Caverna Roch</b></a><br>Rock / Band</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-3.png' %}" alt="" />
+                    <span><a href=""><b>Pixel Digital Design</b></a><br>Company</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+
+
+    {%endblock%}

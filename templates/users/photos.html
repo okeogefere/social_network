@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div class="right_row" style="width:80%;">
+            <div class="row border-radius">
+                <div class="feed">
+                    <div class="feed_title">
+                        <span><a href="{% url 'profile' %}"><b>Profile</b></a> | <a href="{% url 'about' %}"><b>About</b></a> | <a href="{% url 'photos' %}" id="select_profile_menu"><b>Photos</b></a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row shadow">
+                <div class="row_title">
+                    <span>Photos</span>
+                </div>
+                <div class="row_contain_profilephotospage">
+                    <ul>
+                        <li><a href="#"><img src="{% static 'images/pp_1.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_2.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_3.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_4.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_5.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_6.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_3.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_1.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_1.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_2.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_6.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_4.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_5.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_6.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_3.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_1.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_3.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_4.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_5.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_4.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_6.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_3.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_1.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_2.jpg' %}" alt="" /></a></li>
+                    </ul>
+                </div>
+            </div>
+            <center>
+                <a href=""><div class="loadmorefeed">
+                    <i class="fa fa-ellipsis-h"></i>
+                </div></a>
+            </center>
+
+            
+            
+
+        </div>
+
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+
+
+    {%endblock%}

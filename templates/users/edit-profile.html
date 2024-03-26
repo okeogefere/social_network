@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+        
+
+        <div class="right_row">
+
+            <div class="row border-radius">
+                <center><div class="settings shadow">
+                    <div class="settings_title">
+                        <h3>Personal Information</h3>
+                    </div>
+                    <div class="settings_content">
+                        <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                            <div class="pi-input pi-input-lg">
+                                <span>First Name</span>
+                                {{form.first_name}}
+                            </div>
+                            <div class="pi-input pi-input-lg">
+                                <span>Last Name</span>
+                                {{form.last_name}}
+                            </div>
+                            <div class="pi-input pi-input-lg">
+                                <span>Your Email</span>
+                                {{form.email}}
+                            </div>
+                            <div class="pi-input pi-input-lg">
+                                <span>Your Website</span>
+                                {{form.website}}
+                            </div>
+
+                            <div class="pi-input pi-input-lg">
+                                <span>Born in</span>
+                                {{form.born_in}}
+                            </div>
+                            <div class="pi-input pi-input-lg">
+                                <span>Lives in</span>
+                                {{form.lives_in}}
+                            </div>
+
+                            <div class="pi-input pi-input-lg">
+                                <span>Your Birthday</span>
+                                {{form.dob}}
+                            </div>
+                            <div class="pi-input pi-input-lg">
+                                <span>Your Phone Number</span>
+                                {{form.phone}}
+                            </div>
+                            
+
+                            
+                            
+                            
+
+                            <div class="pi-input pi-input-lg">
+                                <span>Your Gender</span>
+                                {{form.gender}}
+                            </div>
+                            <div class="pi-input pi-input-lg">
+                                <span>Status</span>
+                                {{form.status}}
+                            </div>
+                            <div class="pi-input pi-input-lgg">
+                                <span>Little description about you</span>
+                                {{form.bio}}
+                            </div>
+
+                            <button type="submit">Save</button>
+                        </form>
+                    </div>
+                </div></center>
+            </div>
+        </div>
+
+        <div class="suggestions_row">
+            <div class="row shadow">
+                <div class="row_title">
+                    <span>Profile Settings</span>
+                </div>
+                <div class="menusetting_contain">
+                    <ul>
+                        
+                        <li>
+                            <a href="{% url 'settings' %}">Account Settings</a>
+                        </li>
+                        <li>
+                            <a href="Change-Password.html">Change Password</a>
+                        </li>
+                        <li>
+                            <a href="#">Hobbies and Interests</a>
+                        </li>
+                        <li>
+                            <a href="#">Education and Employement</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="row shadow">
+                <div class="row_title">
+                    <span>Pages You May Like</span>
+                    <a href="#">see more..</a>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-1.png' %}" alt="" />
+                    <span><a href=""><b>The Marina Bar</b></a><br>Restaurant / Bar</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-2.jpg' %}" alt="" />
+                    <span><a href=""><b>Caverna Roch</b></a><br>Rock / Band</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-3.png' %}" alt="" />
+                    <span><a href=""><b>Pixel Digital Design</b></a><br>Company</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-1.png' %}" alt="" />
+                    <span><a href=""><b>The Marina Bar</b></a><br>Restaurant / Bar</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-2.jpg' %}" alt="" />
+                    <span><a href=""><b>Caverna Roch</b></a><br>Rock / Band</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-3.png' %}" alt="" />
+                    <span><a href=""><b>Pixel Digital Design</b></a><br>Company</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+
+
+    {%endblock%}

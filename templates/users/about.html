@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+        <div class="right_row">
+            <div class="row border-radius">
+                <div class="feed">
+                    <div class="feed_title">
+                        <span><a href="{% url 'profile' %}"><b>Profile</b></a> | <a href="{% url 'about' %}" id="select_profile_menu"><b>About</b></a> | <a href="{% url 'photos' %}"><b>Photos</b></a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row border-radius">
+                <div class="settings shadow">
+                    <div class="settings_title">
+                        <h3>Personal Info</h3>
+                    </div>
+                    <div class="settings_content">
+                        <style type="text/css">
+                            .settings_content ul li p {padding:5px;padding-left: 20px}
+                        </style>
+                        <ul>
+                            <li>
+                                <p>
+                                    <b>About Me:</b>
+                                    <br>
+                                    {{user_profile.bio}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Birthday:</b>
+                                    <br>
+                                    December 14th, 1980
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Birthplace:</b>
+                                    <br>
+                                    Austin, Texas, USA
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Lives in:</b>
+                                    <br>
+                                    {{user_profile.user.lives_in}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Occupation:</b>
+                                    <br>
+                                    UI/UX Designer
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Joined:</b>
+                                    <br>
+                                    {{user_profile.user.joined}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Gender:</b>
+                                    <br>
+                                    Male
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Status:</b>
+                                    <br>
+                                    Married
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Email:</b>
+                                    <br>
+                                    {{user_profile.user.email}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Website:</b>
+                                    <br>
+                                    Ferrule.space/
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Phone Number:</b>
+                                    <br>
+                                    (044) 555 - 4369 - 8957
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>Website:</b>
+                                    <br>
+                                    Ferrule.space/
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+
+        </div>
+
+        <div class="suggestions_row">
+            
+
+            <div class="row shadow">
+                <div class="row_title">
+                    <span>Last photos</span>
+                    <a href="#">see all..</a>
+                </div>
+                <div class="row_contain_profilephotos">
+                    <ul>
+                        <li><a href="#"><img src="{% static 'images/pp_1.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_2.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_3.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_4.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_5.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_6.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_3.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_1.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_1.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_2.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_6.jpg' %}" alt="" /></a></li>
+                        <li><a href="#"><img src="{% static 'images/pp_4.jpg' %}" alt="" /></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="row shadow">
+                <div class="row_title">
+                    <span>Friends in Common</span>
+                    <a href="friends.html">17 more..</a>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/user-7.jpg' %}" alt="" />
+                    <span><b>Francine Smith</b><br>8 Friends in Common</span>
+                    <button>+</button>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/user-2.jpg' %}" alt="" />
+                    <span><b>Hugh Wilson</b><br>6 Friends in Common</span>
+                    <button>+</button>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/user-6.jpg' %}" alt="" />
+                    <span><b>Karen Masters</b><br>6 Friends in Common</span>
+                    <button>+</button>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/user-7.jpg' %}" alt="" />
+                    <span><b>Francine Smith</b><br>8 Friends in Common</span>
+                    <button>+</button>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/user-2.jpg' %}" alt="" />
+                    <span><b>Hugh Wilson</b><br>6 Friends in Common</span>
+                    <button>+</button>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/user-6.jpg' %}" alt="" />
+                    <span><b>Karen Masters</b><br>6 Friends in Common</span>
+                    <button>+</button>
+                </div>
+            </div>
+
+            <div class="row shadow">
+                <div class="row_title">
+                    <span>Recent Activity's</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/user.jpg' %}" alt="" />
+                    <span>Jonh Hamstrong commented on Jason Mark’s <a href="" class="selected-orange">photo</a>..</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/user.jpg' %}" alt="" />
+                    <span>Jonh Hamstrong liked Nicholas Grissom’s <a href="" class="selected-orange">status update</a>..</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/user.jpg' %}" alt="" />
+                    <span>Jonh Hamstrong added 20 new photos to her <a href="" class="selected-orange">gallery album</a>..</span>
+                </div>
+            </div>
+
+
+            <div class="row shadow">
+                <div class="row_title">
+                    <span>Favourite Pages</span>
+                    <a href="#">see all..</a>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-1.png' %}" alt="" />
+                    <span><a href=""><b>The Marina Bar</b></a><br>Restaurant / Bar</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-2.jpg' %}" alt="" />
+                    <span><a href=""><b>Caverna Roch</b></a><br>Rock / Band</span>
+                </div>
+                <div class="row_contain">
+                    <img src="{% static 'images/group-3.png' %}" alt="" />
+                    <span><a href=""><b>Pixel Digital Design</b></a><br>Company</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+
+
+   {%endblock%}
