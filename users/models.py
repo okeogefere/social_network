@@ -29,6 +29,11 @@ class User(AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
 
+    @property
+    def profile(self):
+        profile, created = UserProfile.objects.get_or_create(user=self)
+        return profile
+
     def __str__(self):
         return self.username
     
